@@ -26,4 +26,5 @@ public class PracticeException extends Throwable{
     public PracticeException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
+
 }

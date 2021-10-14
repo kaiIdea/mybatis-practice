@@ -1,6 +1,8 @@
 package com.example.mybatispractice.model;
 
+import com.example.mybatispractice.annotations.Login;
 import lombok.Data;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * @Auther: GEEX1428
@@ -34,5 +36,9 @@ public class User {
             return true;
         }
         return false;
+    }
+
+    public void checkUser(@Param("userId") String userId,String passWord, @Param("userName")String userName){
+        System.out.printf("******************************userId");
     }
 }
