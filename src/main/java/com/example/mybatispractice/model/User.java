@@ -1,6 +1,5 @@
 package com.example.mybatispractice.model;
 
-import com.example.mybatispractice.annotations.Login;
 import lombok.Data;
 import org.apache.ibatis.annotations.Param;
 
@@ -31,7 +30,7 @@ public class User {
         this.telePhone = telePhone;
     }
 
-    public boolean getValidate(String userName,Integer age){
+    public static boolean getValidate(String userName,Integer age){
         if(null != userName && null != age){
             return true;
         }
@@ -40,5 +39,8 @@ public class User {
 
     public void checkUser(@Param("userId") String userId,String passWord, @Param("userName")String userName){
         System.out.printf("******************************userId");
+    }
+
+    public static void getValidate1() {
     }
 }
